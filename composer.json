@@ -1,0 +1,17 @@
+{
+    "name": "lqs_shansong/lqs",
+    "description": "API",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "LqsShansong\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "imikuclud",
+            "email": "15378259919@163.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
