@@ -35,20 +35,19 @@ class Main
     public function main($token = '')
     {
         var_dump('main :' . date('Y-m-d H:i:s'));
-        var_dump($this->config);
-
-//        $field = $request->getFields();
-//        var_dump($field);
 
         // 获取请求参数
         $param = $this->getPublicParams($token);
 
-//        var_dump($param);
-//        die();
-//        return $this->requestPost($param);
+        // 发起请求
         $data = $this->requestPost($param);
-        var_dump($data);
 
+        if ($data['status'] == 200) {
+            $arr = array('code' => 0, 'msg' => $data['msg'], 'data' => $data['data']);
+        } else {
+            $arr = array('code' => $data['status'], 'msg' => $data['msg']);
+        }
+        return $arr;
     }
 
 
@@ -69,6 +68,8 @@ class Main
         if (empty($param['data'])) {
             unset($param['data']);
         }
+
+        // 签名计算
         $param['sign'] = $this->sing($param, $this->config['app_secret']);
         return $param;
     }

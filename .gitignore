@@ -2,3 +2,4 @@
 /.git
 /index.php
 /vendor
+/src/config.php
