@@ -4,7 +4,7 @@ return [
     // 开发者appId
     'app_id' => 'ssVBG4c5',
     // 开发者App-密钥
-    'git' => 'Y5tlvjsB1kzeK',
+    'app_secret' => 'Y5tlvjsB1kzeK',
     // 1正式 0.测试
     'environment' => 0,
     // 正式商户id
