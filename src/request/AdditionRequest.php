@@ -1,6 +1,7 @@
 <?php
 /**
- * 订单加价 （http://open.ishansong.com/documentCenter/307）
+ * 订单加价
+ * （http://open.ishansong.com/documentCenter/307）
  */
 
 namespace LqsShansong\request;
@@ -15,7 +16,6 @@ class AdditionRequest extends Request
      * 接口路由
      */
     private $route = '/developer/v5/addition';
-
     /**
      * 闪送订单号
      */

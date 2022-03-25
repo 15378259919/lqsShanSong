@@ -1,6 +1,8 @@
 <?php
 /***
  * 新增、修改店铺
+ * (http://open.ishansong.com/documentCenter/315)
+ * (http://open.ishansong.com/documentCenter/316)
  */
 
 
@@ -93,7 +95,7 @@ class StoreOperationRequest extends Request
     }
 
     /**
-     * 设置接口路由
+     * 设置店铺名称
      * @param string $storeName 店铺名称
      */
     public function setStoreName($storeName)
@@ -110,7 +112,7 @@ class StoreOperationRequest extends Request
     }
 
     /**
-     * 设置接口路由
+     * 设置城市名称
      * @param string $cityName 城市名称,查询开通城市接口获取
      */
     public function setCityName( string  $cityName)
@@ -119,7 +121,7 @@ class StoreOperationRequest extends Request
     }
 
     /**
-     * 获取接口路由
+     * 获取城市名称
      */
     public function getCityName()
     {
@@ -127,8 +129,8 @@ class StoreOperationRequest extends Request
     }
 
     /**
-     * 设置接口路由
-     * @param string $address
+     * 设置店铺地址
+     * @param string $address  店铺地址
      */
     public function setAddress( string $address)
     {
@@ -136,7 +138,7 @@ class StoreOperationRequest extends Request
     }
 
     /**
-     * 获取接口路由
+     * 获取店铺地址
      */
     public function getAddress()
     {
@@ -144,7 +146,7 @@ class StoreOperationRequest extends Request
     }
 
     /**
-     * 设置接口路由
+     * 设置店铺详细地址
      * @param string $addressDetail 店铺详细地址
      */
     public function setAddressDetail( string $addressDetail)
@@ -153,7 +155,7 @@ class StoreOperationRequest extends Request
     }
 
     /**
-     * 获取接口路由
+     * 获取店铺详细地址
      */
     public function getAddressDetail()
     {
@@ -161,8 +163,8 @@ class StoreOperationRequest extends Request
     }
 
     /**
-     * 设置接口路由
-     * @param string $latitude 店铺纬度
+     * 设置店铺纬度
+     * @param string $latitude 店铺纬度 （百度坐标系）
      */
     public function setLatitude( string $latitude)
     {
@@ -170,7 +172,7 @@ class StoreOperationRequest extends Request
     }
 
     /**
-     * 获取接口路由
+     * 获取店铺纬度
      */
     public function getLatitude()
     {
@@ -178,8 +180,8 @@ class StoreOperationRequest extends Request
     }
 
     /**
-     * 设置接口路由
-     * @param string $longitude 店铺经度
+     * 设置店铺经度
+     * @param string $longitude 店铺经度 （百度坐标系）
      */
     public function setLongitude(string $longitude)
     {
@@ -187,7 +189,7 @@ class StoreOperationRequest extends Request
     }
 
     /**
-     * 获取接口路由
+     * 获取店铺经度
      */
     public function getLongitude()
     {
@@ -195,7 +197,7 @@ class StoreOperationRequest extends Request
     }
 
     /**
-     * 设置接口路由
+     * 设置店铺联系人手机号/座机
      * @param string $phone 店铺联系人手机号/座机
      */
     public function setPhone( string $phone)
@@ -204,7 +206,7 @@ class StoreOperationRequest extends Request
     }
 
     /**
-     * 获取接口路由
+     * 获取店铺联系人手机号/座机
      */
     public function getPhone()
     {
@@ -257,8 +259,6 @@ class StoreOperationRequest extends Request
     {
         return $this->operationType;
     }
-
-
 
     /**
      * 整合请求需要的参数

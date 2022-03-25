@@ -1,6 +1,7 @@
 <?php
 /**
- * 查询开通城市 (http://open.ishansong.com/documentCenter/301)
+ * 查询开通城市
+ * (http://open.ishansong.com/documentCenter/301)
  **/
 
 namespace LqsShansong\request;

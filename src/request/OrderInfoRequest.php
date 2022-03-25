@@ -1,6 +1,7 @@
 <?php
 /***
- * 查询订单状态 (http://open.ishansong.com/documentCenter/308)
+ * 查询订单状态
+ * (http://open.ishansong.com/documentCenter/308)
  */
 
 namespace LqsShansong\request;
@@ -15,7 +16,6 @@ class OrderInfoRequest extends Request
      * 接口路由
      */
     private $route = '/developer/v5/orderInfo';
-
     /**
      * 闪送订单号
      */

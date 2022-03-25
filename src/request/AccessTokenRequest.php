@@ -1,6 +1,7 @@
 <?php
 /**
  * 获取AccessToken
+ * （http://open.ishansong.com/documentCenter/327）
  */
 
 namespace LqsShansong\request;
@@ -10,8 +11,9 @@ use LqsShansong\Request;
 
 class AccessTokenRequest extends Request
 {
+
     /**
-     * 接口路由 （http://open.ishansong.com/documentCenter/327）
+     * 接口路由
      *
      */
     private $route = '/oauth/token';

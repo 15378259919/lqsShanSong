@@ -1,8 +1,8 @@
 <?php
 /**
  * 查询闪送员位置信息
+ * （http://open.ishansong.com/documentCenter/309）
  */
-
 
 namespace LqsShansong\request;
 
@@ -11,6 +11,7 @@ use LqsShansong\Request;
 
 class CourierInfoRequest extends Request
 {
+
     /**
      * 接口路由
      */
@@ -38,7 +39,7 @@ class CourierInfoRequest extends Request
     }
 
     /**
-     * 设置接口路由
+     * 设置闪送订单号
      * @param string $issOrderNo
      */
     public function setIssOrderNo($issOrderNo)
@@ -47,13 +48,12 @@ class CourierInfoRequest extends Request
     }
 
     /**
-     * 获取接口路由
+     * 获取闪送订单号
      */
     public function getIssOrderNo()
     {
         return $this->issOrderNo;
     }
-
 
     /**
      * 整合请求需要的参数

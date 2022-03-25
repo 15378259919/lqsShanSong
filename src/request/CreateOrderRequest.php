@@ -1,6 +1,7 @@
 <?php
 /**
  * 提交订单
+ * （http://open.ishansong.com/documentCenter/306）
  */
 
 namespace LqsShansong\request;
@@ -12,7 +13,7 @@ class CreateOrderRequest extends Request
 {
 
     /**
-     * 接口路由 （http://open.ishansong.com/documentCenter/306）
+     * 接口路由
      *
      */
     private $route = '/developer/v5/orderPlace';
@@ -66,8 +67,6 @@ class CreateOrderRequest extends Request
         $data['issOrderNo'] = $this->getIssOrderNo();
         $this->setFields($data);
     }
-
-
 
 
 }

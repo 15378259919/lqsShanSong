@@ -30,11 +30,11 @@ class Main
      * 执行主体方法
      * @param string $token 授权成功获取
      *                          授权获取参考(https://open.ishansong.com/documentCenter/327)
-     * @return bool|string
+     * @return array
      */
     public function main($token = '')
     {
-        var_dump('main :' . date('Y-m-d H:i:s'));
+//        var_dump('main :' . date('Y-m-d H:i:s'));
 
         // 获取请求参数
         $param = $this->getPublicParams($token);
@@ -65,10 +65,10 @@ class Main
         }
         $param['timestamp'] = trim(time() * 1000);
         $param['data'] = $this->api->getFields();
+
         if (empty($param['data'])) {
             unset($param['data']);
         }
-
         // 签名计算
         $param['sign'] = $this->sing($param, $this->config['app_secret']);
         return $param;
@@ -116,6 +116,28 @@ class Main
         $resp = curl_exec($curl);
         curl_close($curl);
         return json_decode($resp, true);
+    }
+
+
+    /**
+     * GCJ-02(火星，高德) 坐标转换成 BD-09(百度) 坐标
+     * @param string|float bd_lon 百度经度
+     * @param string|float bd_lat 百度纬度
+     * @return mixed
+     */
+    public function bd_encrypt($gg_lon,$gg_lat)
+    {
+        $x_pi = 3.14159265358979324 * 3000.0 / 180.0;
+        $x = $gg_lon;
+        $y = $gg_lat;
+        $z = sqrt($x * $x + $y * $y) - 0.00002 * sin($y * $x_pi);
+        $theta = atan2($y, $x) - 0.000003 * cos($x * $x_pi);
+        $bd_lon = $z * cos($theta) + 0.0065;
+        $bd_lat = $z * sin($theta) + 0.006;
+        // 保留小数点后六位
+        $longitude = round($bd_lon, 6);
+        $latitude = round($bd_lat, 6);
+        return $latitude . ',' . $longitude;
     }
 
 
