@@ -19,7 +19,7 @@
 ## 安装
 
 ~~~
-composer 
+composer require lqs_shansong/lqs
 ~~~
 
 ## 使用案例
